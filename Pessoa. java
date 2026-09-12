@@ -9,5 +9,9 @@ public class Pessoa {
     public String getNome() {
         return nome;
     }
+
+    public void apresentar() {
+        System.out.println("Pessoa: " + nome);
+    }
 }
 
