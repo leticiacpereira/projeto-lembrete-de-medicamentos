@@ -1,15 +1,18 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("=== MEDCONTROL ===");
         
+        System.out.println("=== MEDCONTROL ===");
         System.out.print("Nome do paciente: ");
+        
         String paciente = scanner.nextLine();
         
         System.out.print("Nome do cuidador: ");
         String nomeCuidador = scanner.nextLine();
+        
         Cuidador cuidador = new Cuidador(nomeCuidador);
         
         System.out.print("Nome do medicamento: ");
@@ -21,10 +24,12 @@ public class Main {
         System.out.print("Horario: ");
         String horario = scanner.nextLine();
         
-        Medicamento medicamento = new Medicamento(nomeMedicamento, dose, horario);
-        
+        Medicamento medicamento = 
+                new Medicamento(nomeMedicamento, dose, horario);
+                
         System.out.println("\n=== AGENDA ===");
         System.out.println("Paciente: " + paciente);
+        
         cuidador.apresentar();
         medicamento.mostrar();
         
@@ -43,3 +48,4 @@ public class Main {
         scanner.close();
     }
 }
+
